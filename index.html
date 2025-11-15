@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Feliz 17 Anos, Bel!</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="container">
+        <h1>Feliz 17, Bel!</h1>
+        <p style="color: var(--highlight-white); font-size: 1.1rem">
+          Um site inteiro para celebrar você.
+        </p>
+      </div>
+    </header>
+
+    <main>
+      <section class="container">
+        <div class="pillars">
+          <div class="pillar-card">
+            <h3><i class="fa-solid fa-cross"></i>Pilar da Fé</h3>
+            <blockquote>
+              "Jovens de todos os continentes, não tenham medo de ser os santos
+              do novo milênio!"
+            </blockquote>
+            <cite>- São João Paulo II</cite>
+          </div>
+
+          <div class="pillar-card">
+            <h3><i class="fa-brands fa-python"></i>Pilar da Programação</h3>
+            <div class="code-block">
+              <span class="py-comment"># feliz_aniversario.py</span><br />
+              <span class="py-keyword">def</span>
+              <span class="py-func">comemorar</span>(<span class="py-keyword"
+                >nome, idade</span
+              >):<br />
+                <span class="py-keyword">if</span> idade == 17:<br />
+                  <span class="py-keyword">print</span>(f<span class="py-string"
+                >"Parabéns, Beelll!"</span
+              >)<br />
+                <span class="py-keyword">print</span>(<span class="py-string"
+                >"Que seja um ano incrível!"</span
+              >)<br /><br />
+              <span class="py-func">comemorar</span>(<span class="py-string"
+                >''</span
+              >, 17)
+            </div>
+          </div>
+
+          <div class="pillar-card">
+            <h3><i class="fa-solid fa-music"></i>Pilar da Música</h3>
+            <p>A trilha sonora que embala os sonhos e a fé.</p>
+
+            <div class="custom-audio-player">
+              <div class="album-art">
+                <img src="./assents/image.png" alt="Capa do Álbum" />
+              </div>
+
+              <div class="song-info">
+                <h4 class="song-title">Hold Me Down</h4>
+                <p class="song-artist">Daniel Caesar</p>
+              </div>
+
+              <div class="play-button" id="playButton">
+                <i class="fas fa-play" id="playIcon"></i>
+              </div>
+            </div>
+
+            <audio id="audioPlayer" src="./assents/videoplayback.mp3"></audio>
+          </div>
+        </div>
+      </section>
+
+      <section class="container content-card">
+        <div class="memory-layout">
+          <div class="memory-img">
+            <img src="./assents/eu&bel.jpg" alt="Nossa Memória" />
+          </div>
+          <div class="memory-text">
+            <h2>Memórias com o Melhor Programador (Davi)</h2>
+            <h3>Uma parceria de não sei quanto tempo</h3>
+            <p>
+              O belll, criar este site para você foi bem legal! Percebi mais
+              ainda o quanto voce é importante na vida de cada um que esta no
+              mural, seu jeito, sua beleza e o mais importante, sua alegria e
+              cuidado com todos, enfim né sem muito mela mela aqui, mais saiba
+              que voce é uma pessoa incrivel que arranca muitos sorrisos, que
+              continue sendo essa mina que alegra tudo e todos que ta a sua
+              volta, e como seu coordenador tambem né só tenho a pedir que
+              continua sendo essa garota no qual adora imensamente a Deus e
+              serve a Ele com imenso amor no coração, voce já sabe mais continuo
+              repetindo, tenho carinho enorme por voce, amo voce garota!
+            </p>
+            <p>Com todo carinho, do seu programador favorito!</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="container" id="challenge-gate">
+        <div class="challenge-card">
+          <div id="challenge-python">
+            <h2>
+              <i
+                class="fas fa-lock"
+                style="color: var(--accent-lavender); font-size: 2.5rem"
+              ></i>
+            </h2>
+            <h2>Mural Bloqueado (Nível 1)</h2>
+            <p>
+              Como uma boa programadora, você precisa "descriptografar" seu
+              presente.
+            </p>
+
+            <label for="python-input">Desafio Python:</label>
+            <p class="riddle">
+              Qual é o comando que usamos em Python para
+              <strong>imprimir</strong> algo na tela?
+            </p>
+
+            <div class="challenge-input-group">
+              <input
+                type="text"
+                id="python-input"
+                placeholder="Digite o comando..."
+              />
+              <button id="unlock-python-button" >Desbloquear Nível 1</button>
+            </div>
+            <p id="python-error" class="error-message hidden">
+              Comando errado... tente de novo! (Dica: é só o nome da função)
+            </p>
+          </div>
+
+          <div id="challenge-faith" class="hidden">
+            <h2>
+              <i
+                class="fas fa-key"
+                style="color: var(--accent-lavender); font-size: 2.5rem"
+              ></i>
+            </h2>
+            <h2>Última Chave (Nível 2)</h2>
+            <p>Agora, um desafio para quem é "fera" na Santa Missa...</p>
+
+            <label for="faith-input">Desafio da Fé:</label>
+            <p class="riddle">
+              Em que momento da Missa o coroinha abre o Missal na página do Pai
+              Nosso ?
+            </p>
+
+            <div class="challenge-input-group">
+              <input
+                type="text"
+                id="faith-input"
+                placeholder="Digite o momento da missa..."
+              />
+              <button id="unlock-faith-button">Revelar Presente!</button>
+            </div>
+            <p id="faith-error" class="error-message hidden">
+              Resposta errada... (Dica: Começa com "Rito da C...")
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="container hidden" id="mural-section">
+        <h2>Mural de Carinho dos Seus Amigos</h2>
+        <div class="mural-grid"></div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Feito com ❤️ e 💻 por seu programador preferido(Davi)</p>
+    </footer>
+
+    <div id="messageModal" class="modal">
+      <div class="modal-content" id="modal-content">
+        <span class="modal-close">×</span>
+        <div id="modalImgContainer">
+        </div>
+        <h3 id="modalName"></h3>
+        <div id="modalBody" class="modal-body"></div>
+        <div id="modalVideoContainer" style="display: none">
+          <video id="modalVideo" width="100%" controls>
+            Seu navegador não suporta a tag de vídeo.
+          </video>
+        </div>
+        <div id="modalAudioContainer" style="display: none">
+          <audio id="modalAudio" controls style="width: 100%">
+            Seu navegador não suporta áudio.
+          </audio>
+        </div>
+      </div>
+    </div>
+
+  </body>
+  <script type="module" src="script.js"></script>
+</html>

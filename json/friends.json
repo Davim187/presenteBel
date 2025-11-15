@@ -1,0 +1,51 @@
+[
+  {
+    "id": 1,
+    "photo": "./assents/clara/clara.jpg",
+    "name": "Maria Clara",
+    "description": "",
+    "video": "./assents/clara/videoClara.mp4",
+    "audio":""
+
+  },
+  {
+    "id": 2,
+    "photo": "./assents/monteiro/Monteiro.jpg",
+    "name": "Monteiro",
+    "description": "",
+    "video": "",
+    "audio":"./assents/monteiro/audioMonteiro.mp3"
+  },
+  {
+    "id": 3,
+    "photo": "./assents/maria/maria.jpg",
+    "name": "Maria",
+    "description": "Seu dia; </br> Dia da belzinha, daquela que me faz sorrir, até mesmo nos dias ruins e aquela amizade que quero levar pra vida toda </br></br>Dia de celebrar a pessoa incrível que você é!  Eu me sinto tão sortuda por ter você na minha vida. Sua amizade é um presente de Deus e que sempre valorizo todos os dias. Você me apoia, me faz rir e estar sempre ao meu lado, mesmo em dias difíceis. </br>Desde que te conheci não consigo imaginar a minha vida sem você, porque você faz tudo ficar melhor. Cada risada, cada conversar e até mesmo cada lágrima compartilhada. Obrigada por tudo e por tanto belzinha. Que essa nova fase seja tão incríve quanto você!! Feliz vida e que Deus abençoe sempre sua vida e que Nossa Senhora Aparecida te guarde com o seu manto.",
+    "video": "",
+    "audio":""
+  },
+  {
+    "id": 4,
+    "photo": "./assents/mylena/mylena.jpg",
+    "name": "Mylena",
+    "description": "Hoje é o dia da minha melhor amiga! Aquela que me atura há mais tempo, que dá os melhores conselhos e as melhores broncas. Aquela amiga fechamento, que tá sempre pronta pra me defender, me ouvir e me dar o melhor abraço do mundo inteiro!Quem dera se todo mundo tivesse o privilégio de ter uma amizade como a sua. Mas, sorte a minha que, na loteria da vida, ganhei o melhor prêmio possível: você!Parabéns, meu amor! Que seja um ano lindo, assim como você!Te amo pra sempre! ♾",
+    "video": "",
+    "audio":""
+  },
+  {
+    "id": 4,
+    "photo": "./assents/alisson/alisson.mp4",
+    "name": "Alisson",
+    "description": "Parabéns Isabelle, amiga eu desde o ano passado que vc me pediu pra não deixar de sermos amigo eu senti que me conectei com vc bastante, por isso eu quero te desejar esse feliz aniversário com todo amor do mundo! Um cheru minha linda 💅🏾✨",
+    "video": "",
+    "audio":""
+  },
+  {
+    "id": 4,
+    "photo": "./assents/Ingrid/Ingrid.jpeg",
+    "name": "Ingrid",
+    "description": "Feliz aniversário, Bel!! Me sinto extremamente feliz por compartilhar essa data com você por tantos anos. Nossa amizade começou pequenininhas e espero levar para sempre. Muitos anos de vida, que Deus abençoe eternamente sua vida e suas escolhas, iluminando seus caminhos. Que a virgem Maria te guarde e que você continue sendo essa menina incrível que você é </br></br> Nunca esqueça que eu te amo muitão e que todas as suas conquistas são as minhas conquistas amore, te amo Bel 💗💗",
+    "video": "",
+    "audio":""
+  }
+]
