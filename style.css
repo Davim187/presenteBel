@@ -366,6 +366,7 @@ h2 {
   border-radius: 50%;
   border: 4px solid var(--accent-lavender);
   margin-bottom: 15px;
+  object-position: top;
 }
 .modal-content h3 {
   font-family: var(--font-title);
