@@ -62,6 +62,25 @@ const db = getFirestore(app);
 const idUserUnico = "1"
 const docRef = doc(db, "respostas", idUserUnico);
 
+let scrollTop = 0;
+
+function bloquearScroll() {
+  scrollTop = window.scrollY;
+
+  document.body.style.position = 'fixed';
+  document.body.style.top = `-${scrollTop}px`;
+  document.body.style.width = '100%';
+}
+
+function liberarScroll() {
+  document.body.style.position = '';
+  document.body.style.top = '';
+  document.body.style.width = '';
+
+  window.scrollTo(0, scrollTop);
+}
+
+
 async function carregarCards() {
   try {
     const response = await fetch('./json/friends.json');
@@ -138,7 +157,9 @@ function adicionarListenersDoModal() {
         }
         
         modal.style.display = 'block';
-        body.style.overflow = 'hidden';
+        bloquearScroll();
+
+
 
     });
   });
@@ -147,7 +168,9 @@ function adicionarListenersDoModal() {
 
 function fecharOModal() {
   modal.style.display = 'none';
-  body.style.overflow = '';
+  liberarScroll();
+
+
 
   modalBody.innerHTML = '';
   if (modalVideo) {

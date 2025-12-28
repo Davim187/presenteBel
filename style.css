@@ -172,6 +172,13 @@ h2 {
   color: #637777;
 }
 
+.no-scroll {
+  overflow: hidden;
+  height: 100%;
+  touch-action: none; /* bloqueia gestos no mobile */
+}
+
+
 .custom-audio-player {
   display: flex;
   align-items: center;
@@ -350,16 +357,13 @@ h2 {
   padding-top: 60px;
 }
 
-body.messageModal {
-  overflow: hidden;
-  /* height: 100vh; */
-}
 
 .modal-content {
   background-color: var(--card-bg);
   margin: auto;
   padding: 30px;
   border-radius: 15px;
+
 
   width: 78%;
   max-width: 600px;
@@ -372,35 +376,33 @@ body.messageModal {
   max-height: 85vh;
   display: flex;
   flex-direction: column;
-  overflow: hidden; /* evita scroll duplo */
+  overflow: auto; /* evita scroll duplo */
 }
 
 .modal-body {
-  overflow-y: auto;
   padding-right: 10px;
   margin-top: 10px;
-  max-height: 45vh;
 }
 
-.modal-body::-webkit-scrollbar {
+.modal-content::-webkit-scrollbar {
   width: 6px;
 }
 
-.modal-body::-webkit-scrollbar-track {
+.modal-content::-webkit-scrollbar-track {
   background: transparent;
 }
 
-.modal-body::-webkit-scrollbar-thumb {
+.modal-content::-webkit-scrollbar-thumb {
   background-color: rgba(192, 160, 255, 0.6);
   border-radius: 10px;
   transition: background-color 0.2s ease;
 }
 
-.modal-body::-webkit-scrollbar-thumb:hover {
+.modal-content::-webkit-scrollbar-thumb:hover {
   background-color: var(--accent-lavender);
 }
 
-.modal-body {
+.modal-content {
   -webkit-overflow-scrolling: touch;
 }
 
