@@ -3,6 +3,8 @@ const modalImg = document.getElementById('modalImg');
 const modalName = document.getElementById('modalName');
 const modalBody = document.getElementById('modalBody');
 const modalContent = document.getElementById('modalImgContainer');
+const body = document.body;
+
 
 const closeModal = document.querySelector('.modal-close');
 const muralContainer = document.querySelector('.mural-grid');
@@ -68,33 +70,32 @@ async function carregarCards() {
     cardFriend.forEach(card => {
       var extension = card.photo.split('.').pop()
       muralContainer.innerHTML += `
-        <div
-          class="friend-card"
-          data-name="${card.name}"
-          data-img-src="${card.photo}"
-          data-message="${card.description}"
-          data-video="${card.video || ''}"
-          data-audio="${card.audio || ''}"
-        >
-        ${
-          (extension === 'mp4' || extension === 'webm') ? `
-            <video class="friend-video" src="${card.photo}" alt="Vídeo de ${card.name}" loop playsinline autoplay muted></video>
-          ` : `<img
-            class="friend-photo" 
-            src="${card.photo}"
-            alt="Foto de ${card.name}"
-          />`
-        }
-          <div class="card-footer">
-            <h4 class="friend-name">${card.name}</h4>
-            <span class="open-message">Abrir Mensagem</span>
-          </div>
-        </div>
+      <div
+      class="friend-card"
+      data-name="${card.name}"
+      data-img-src="${card.photo}"
+      data-message="${card.description}"
+      data-video="${card.video || ''}"
+      data-audio="${card.audio || ''}"
+      >
+      ${
+        (extension === 'mp4' || extension === 'webm') ? `
+        <video class="friend-video" src="${card.photo}" alt="Vídeo de ${card.name}" loop playsinline autoplay muted></video>
+        ` : `<img
+        class="friend-photo" 
+        src="${card.photo}"
+        alt="Foto de ${card.name}"
+        />`
+      }
+      <div class="card-footer">
+      <h4 class="friend-name">${card.name}</h4>
+      <span class="open-message">Abrir Mensagem</span>
+      </div>
+      </div>
       `;
     });
-
+    
     adicionarListenersDoModal();
-
   } catch (error) {
     console.error("Erro ao carregar os cards:", error);
   }
@@ -111,40 +112,43 @@ function adicionarListenersDoModal() {
       const videoUrl = card.dataset.video;
       const audioUrl = card.dataset.audio
       var extension = card.dataset.imgSrc.split('.').pop()
-
+      
       modalContent.innerHTML = `
-        ${(extension === 'mp4' || extension === 'webm') ? `
-          <video class="friend-video" src="${img}" alt="Vídeo do Amigo" loop playsinline autoplay muted></video>
+      ${(extension === 'mp4' || extension === 'webm') ? `
+        <video class="friend-video" src="${img}" alt="Vídeo do Amigo" loop playsinline autoplay muted></video>
         ` : `<img id="modalImg" src="${img}" alt="Foto do Amigo" />`}`
-      modalName.textContent = name;
-      // modalImg.src = img;
-      modalBody.innerHTML = message;
+        modalName.textContent = name;
+        // modalImg.src = img;
+        modalBody.innerHTML = message;
+        
+        if (videoUrl && videoUrl.trim() !== "") {
+          modalVideo.src = videoUrl;
+          modalVideoContainer.style.display = 'block';
+        } else {
+          modalVideoContainer.style.display = 'none';
+          modalVideo.src = '';
+        }
+        if (audioUrl && audioUrl.trim() !== "") {
+          
+          modalAudio.src = audioUrl;
+          modalAudioContainer.style.display = 'block';
+        } else {
+          modalAudioContainer.style.display = 'none';
+          modalAudio.src = '';
+        }
+        
+        modal.style.display = 'block';
+        body.style.overflow = 'hidden';
 
-      if (videoUrl && videoUrl.trim() !== "") {
-        modalVideo.src = videoUrl;
-        modalVideoContainer.style.display = 'block';
-      } else {
-        modalVideoContainer.style.display = 'none';
-        modalVideo.src = '';
-      }
-      if (audioUrl && audioUrl.trim() !== "") {
-
-        modalAudio.src = audioUrl;
-        modalAudioContainer.style.display = 'block';
-      } else {
-        modalAudioContainer.style.display = 'none';
-        modalAudio.src = '';
-      }
-
-      modal.style.display = 'block';
     });
   });
 }
 
 
 function fecharOModal() {
-  console.log('ad')
   modal.style.display = 'none';
+  body.style.overflow = '';
+
   modalBody.innerHTML = '';
   if (modalVideo) {
     modalVideo.src = '';
