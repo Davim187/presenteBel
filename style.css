@@ -394,6 +394,11 @@ h2 {
   background-color: var(--accent-lavender);
 }
 
+.modal-body {
+  -webkit-overflow-scrolling: touch;
+}
+
+
 .modal-close {
   color: var(--text-light);
   position: absolute;
